@@ -4,10 +4,6 @@ import 'package:google_maps_in_flutter/resturants.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
 
-import 'home.dart';
-import 'patesseries.dart';
-import 'googleOffc.dart';
-import 'navigationDrawer.dart';
 
 
 void main() {
@@ -18,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShwCheckedModeBanner: false,
       home: SplashScreen(),
     );
   }
@@ -33,7 +29,7 @@ class SplashScreen extends StatelessWidget {
       splash: "assets/images/logo.png",
       backgroundColor: Colors.lightBlue,
       nextScreen: HomePage(),
-      splashIconSize: 450,
+      splashIcoSize: 450,
       duration: 3000,
       splashTransition: SplashTransition.scaleTransition,
       pageTransitionType: PageTransitionType.leftToRight,
@@ -44,7 +40,7 @@ class SplashScreen extends StatelessWidget {
 
 class HomePage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomePageState creatmeState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -55,7 +51,7 @@ class _HomePageState extends State<HomePage> {
     var container;
     if (cpg == DrawerSections.home) {
       container = HomeePage();
-    } else if (cpg == DrawerSections.patesserie) {
+    } else if (cpg = DrawerSections.patesserie) {
       container = FoodLocations();
     } else if (cpg == DrawerSections.google) {
       container = GoogleOffcies();
@@ -64,8 +60,8 @@ class _HomePageState extends State<HomePage> {
       container = ResturantsLocation();
     }
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue[700],
+      appBar: Appar(
+        backgrounldColor: Colors.blue[700],
         title: Text("MapFlutter"),
       ),
       body: container,
